@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 4/20/2016 5:30:21 PM
+// Generation date: 4/22/2016 10:30:44 AM
 namespace ProductsApp.ProductService.Models
 {
     /// <summary>
@@ -35,6 +35,28 @@ namespace ProductsApp.ProductService.Models
         public ProductSingle(global::Microsoft.OData.Client.DataServiceQuerySingle<Product> query)
             : base(query) {}
 
+        /// <summary>
+        /// There are no comments for Supplier in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Supplier")]
+        public global::ProductsApp.ProductService.Models.SupplierSingle Supplier
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._Supplier == null))
+                {
+                    this._Supplier = new global::ProductsApp.ProductService.Models.SupplierSingle(this.Context, GetPath("Supplier"));
+                }
+                return this._Supplier;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::ProductsApp.ProductService.Models.SupplierSingle _Supplier;
     }
     /// <summary>
     /// There are no comments for Product in the schema.
@@ -152,6 +174,207 @@ namespace ProductsApp.ProductService.Models
         partial void OnCategoryChanging(string value);
         partial void OnCategoryChanged();
         /// <summary>
+        /// There are no comments for Property SupplierId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("SupplierId")]
+        public global::System.Nullable<int> SupplierId
+        {
+            get
+            {
+                return this._SupplierId;
+            }
+            set
+            {
+                this.OnSupplierIdChanging(value);
+                this._SupplierId = value;
+                this.OnSupplierIdChanged();
+                this.OnPropertyChanged("SupplierId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<int> _SupplierId;
+        partial void OnSupplierIdChanging(global::System.Nullable<int> value);
+        partial void OnSupplierIdChanged();
+        /// <summary>
+        /// There are no comments for Property Supplier in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Supplier")]
+        public global::ProductsApp.ProductService.Models.Supplier Supplier
+        {
+            get
+            {
+                return this._Supplier;
+            }
+            set
+            {
+                this.OnSupplierChanging(value);
+                this._Supplier = value;
+                this.OnSupplierChanged();
+                this.OnPropertyChanged("Supplier");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::ProductsApp.ProductService.Models.Supplier _Supplier;
+        partial void OnSupplierChanging(global::ProductsApp.ProductService.Models.Supplier value);
+        partial void OnSupplierChanged();
+        /// <summary>
+        /// This event is raised when the value of the property is changed
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// The value of the property is changed
+        /// </summary>
+        /// <param name="property">property name</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for SupplierSingle in the schema.
+    /// </summary>
+    [global::Microsoft.OData.Client.OriginalNameAttribute("SupplierSingle")]
+    public partial class SupplierSingle : global::Microsoft.OData.Client.DataServiceQuerySingle<Supplier>
+    {
+        /// <summary>
+        /// Initialize a new SupplierSingle object.
+        /// </summary>
+        public SupplierSingle(global::Microsoft.OData.Client.DataServiceContext context, string path)
+            : base(context, path) {}
+
+        /// <summary>
+        /// Initialize a new SupplierSingle object.
+        /// </summary>
+        public SupplierSingle(global::Microsoft.OData.Client.DataServiceContext context, string path, bool isComposable)
+            : base(context, path, isComposable) {}
+
+        /// <summary>
+        /// Initialize a new SupplierSingle object.
+        /// </summary>
+        public SupplierSingle(global::Microsoft.OData.Client.DataServiceQuerySingle<Supplier> query)
+            : base(query) {}
+
+        /// <summary>
+        /// There are no comments for Products in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Products")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Product> Products
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._Products == null))
+                {
+                    this._Products = Context.CreateQuery<global::ProductsApp.ProductService.Models.Product>(GetPath("Products"));
+                }
+                return this._Products;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Product> _Products;
+    }
+    /// <summary>
+    /// There are no comments for Supplier in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::Microsoft.OData.Client.Key("Id")]
+    [global::Microsoft.OData.Client.OriginalNameAttribute("Supplier")]
+    public partial class Supplier : global::Microsoft.OData.Client.BaseEntityType, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Supplier object.
+        /// </summary>
+        /// <param name="ID">Initial value of Id.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        public static Supplier CreateSupplier(int ID)
+        {
+            Supplier supplier = new Supplier();
+            supplier.Id = ID;
+            return supplier;
+        }
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Id")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Products in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Products")]
+        public global::Microsoft.OData.Client.DataServiceCollection<global::ProductsApp.ProductService.Models.Product> Products
+        {
+            get
+            {
+                return this._Products;
+            }
+            set
+            {
+                this.OnProductsChanging(value);
+                this._Products = value;
+                this.OnProductsChanged();
+                this.OnPropertyChanged("Products");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::Microsoft.OData.Client.DataServiceCollection<global::ProductsApp.ProductService.Models.Product> _Products = new global::Microsoft.OData.Client.DataServiceCollection<global::ProductsApp.ProductService.Models.Product>(null, global::Microsoft.OData.Client.TrackingMode.None);
+        partial void OnProductsChanging(global::Microsoft.OData.Client.DataServiceCollection<global::ProductsApp.ProductService.Models.Product> value);
+        partial void OnProductsChanged();
+        /// <summary>
         /// This event is raised when the value of the property is changed
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
@@ -197,9 +420,32 @@ namespace ProductsApp.ProductService.Models
             };
             return new global::ProductsApp.ProductService.Models.ProductSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
+        /// <summary>
+        /// Get an entity of type global::ProductsApp.ProductService.Models.Supplier as global::ProductsApp.ProductService.Models.SupplierSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="keys">dictionary with the names and values of keys</param>
+        public static global::ProductsApp.ProductService.Models.SupplierSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Supplier> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        {
+            return new global::ProductsApp.ProductService.Models.SupplierSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
+        /// <summary>
+        /// Get an entity of type global::ProductsApp.ProductService.Models.Supplier as global::ProductsApp.ProductService.Models.SupplierSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="id">The value of id</param>
+        public static global::ProductsApp.ProductService.Models.SupplierSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Supplier> source,
+            int id)
+        {
+            global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
+            {
+                { "Id", id }
+            };
+            return new global::ProductsApp.ProductService.Models.SupplierSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
     }
 }
-namespace ProductsApp.Default
+namespace ProductsApp.ProductService
 {
     /// <summary>
     /// There are no comments for Container in the schema.
@@ -234,7 +480,7 @@ namespace ProductsApp.Default
             {
                 return resolvedType;
             }
-            resolvedType = this.DefaultResolveType(typeName, "Default", "ProductsApp.Default");
+            resolvedType = this.DefaultResolveType(typeName, "ProductService", "ProductsApp.ProductService");
             if ((resolvedType != null))
             {
                 return resolvedType;
@@ -258,13 +504,13 @@ namespace ProductsApp.Default
                 }
                 return string.Concat("ProductService.Models.", clientType.Name);
             }
-            if (clientType.Namespace.Equals("ProductsApp.Default", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("ProductsApp.ProductService", global::System.StringComparison.Ordinal))
             {
                 if (originalNameAttribute != null)
                 {
-                    return string.Concat("Default.", originalNameAttribute.OriginalName);
+                    return string.Concat("ProductService.", originalNameAttribute.OriginalName);
                 }
-                return string.Concat("Default.", clientType.Name);
+                return string.Concat("ProductService.", clientType.Name);
             }
             return null;
         }
@@ -287,6 +533,24 @@ namespace ProductsApp.Default
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
         private global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Product> _Products;
         /// <summary>
+        /// There are no comments for Suppliers in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Suppliers")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Supplier> Suppliers
+        {
+            get
+            {
+                if ((this._Suppliers == null))
+                {
+                    this._Suppliers = base.CreateQuery<global::ProductsApp.ProductService.Models.Supplier>("Suppliers");
+                }
+                return this._Suppliers;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Supplier> _Suppliers;
+        /// <summary>
         /// There are no comments for Products in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
@@ -294,6 +558,32 @@ namespace ProductsApp.Default
         {
             base.AddObject("Products", product);
         }
+        /// <summary>
+        /// There are no comments for Suppliers in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        public void AddToSuppliers(global::ProductsApp.ProductService.Models.Supplier supplier)
+        {
+            base.AddObject("Suppliers", supplier);
+        }
+        /// <summary>
+        /// There are no comments for SuperSupplier in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("SuperSupplier")]
+        public global::ProductsApp.ProductService.Models.SupplierSingle SuperSupplier
+        {
+            get
+            {
+                if ((this._SuperSupplier == null))
+                {
+                    this._SuperSupplier = new global::ProductsApp.ProductService.Models.SupplierSingle(this, "SuperSupplier");
+                }
+                return this._SuperSupplier;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::ProductsApp.ProductService.Models.SupplierSingle _SuperSupplier;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
         private abstract class GeneratedEdmModel
         {
@@ -303,7 +593,7 @@ namespace ProductsApp.Default
             private const string Edmx = @"<edmx:Edmx Version=""4.0"" xmlns:edmx=""http://docs.oasis-open.org/odata/ns/edmx"">
   <edmx:DataServices>
     <Schema Namespace=""ProductService.Models"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
-      <EntityType Name=""Product"">
+      <EntityType Name=""Product"" OpenType=""true"">
         <Key>
           <PropertyRef Name=""Id"" />
         </Key>
@@ -311,11 +601,44 @@ namespace ProductsApp.Default
         <Property Name=""Name"" Type=""Edm.String"" />
         <Property Name=""Price"" Type=""Edm.Decimal"" Nullable=""false"" />
         <Property Name=""Category"" Type=""Edm.String"" />
+        <Property Name=""SupplierId"" Type=""Edm.Int32"" />
+        <NavigationProperty Name=""Supplier"" Type=""ProductService.Models.Supplier"">
+          <ReferentialConstraint Property=""SupplierId"" ReferencedProperty=""Id"" />
+        </NavigationProperty>
+      </EntityType>
+      <EntityType Name=""Supplier"">
+        <Key>
+          <PropertyRef Name=""Id"" />
+        </Key>
+        <Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""Name"" Type=""Edm.String"" />
+        <NavigationProperty Name=""Products"" Type=""Collection(ProductService.Models.Product)"" />
       </EntityType>
     </Schema>
-    <Schema Namespace=""Default"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
+    <Schema Namespace=""ProductService"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
+      <Action Name=""Rate"" IsBound=""true"">
+        <Parameter Name=""bindingParameter"" Type=""ProductService.Models.Product"" />
+        <Parameter Name=""Rating"" Type=""Edm.Int32"" Nullable=""false"" />
+      </Action>
+      <Function Name=""MostExpensive"" IsBound=""true"">
+        <Parameter Name=""bindingParameter"" Type=""Collection(ProductService.Models.Product)"" />
+        <ReturnType Type=""Edm.Double"" Nullable=""false"" />
+      </Function>
+      <Function Name=""GetSalesTaxRate"">
+        <Parameter Name=""PostalCode"" Type=""Edm.Int32"" Nullable=""false"" />
+        <ReturnType Type=""Edm.Double"" Nullable=""false"" />
+      </Function>
       <EntityContainer Name=""Container"">
-        <EntitySet Name=""Products"" EntityType=""ProductService.Models.Product"" />
+        <EntitySet Name=""Products"" EntityType=""ProductService.Models.Product"">
+          <NavigationPropertyBinding Path=""Supplier"" Target=""Suppliers"" />
+        </EntitySet>
+        <EntitySet Name=""Suppliers"" EntityType=""ProductService.Models.Supplier"">
+          <NavigationPropertyBinding Path=""Products"" Target=""Products"" />
+        </EntitySet>
+        <Singleton Name=""SuperSupplier"" Type=""ProductService.Models.Supplier"">
+          <NavigationPropertyBinding Path=""Products"" Target=""Products"" />
+        </Singleton>
+        <FunctionImport Name=""GetSalesTaxRate"" Function=""ProductService.GetSalesTaxRate"" IncludeInServiceDocument=""true"" />
       </EntityContainer>
     </Schema>
   </edmx:DataServices>
@@ -343,6 +666,46 @@ namespace ProductsApp.Default
             {
                 return global::System.Xml.XmlReader.Create(new global::System.IO.StringReader(edmxToParse));
             }
+        }
+        /// <summary>
+        /// There are no comments for GetSalesTaxRate in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("GetSalesTaxRate")]
+        public global::Microsoft.OData.Client.DataServiceQuerySingle<double> GetSalesTaxRate(int PostalCode)
+        {
+            return this.CreateFunctionQuerySingle<double>("", "GetSalesTaxRate", false, new global::Microsoft.OData.Client.UriOperationParameter("PostalCode", PostalCode));
+        }
+    }
+    /// <summary>
+    /// Class containing all extension methods
+    /// </summary>
+    public static class ExtensionMethods
+    {
+        /// <summary>
+        /// There are no comments for MostExpensive in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("MostExpensive")]
+        public static global::Microsoft.OData.Client.DataServiceQuerySingle<double> MostExpensive(this global::Microsoft.OData.Client.DataServiceQuery<global::ProductsApp.ProductService.Models.Product> source)
+        {
+            if (!source.IsComposable)
+            {
+                throw new global::System.NotSupportedException("The previous function is not composable.");
+            }
+
+            return source.CreateFunctionQuerySingle<double>("ProductService.MostExpensive", false);
+        }
+        /// <summary>
+        /// There are no comments for Rate in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Rate")]
+        public static global::Microsoft.OData.Client.DataServiceActionQuery Rate(this global::Microsoft.OData.Client.DataServiceQuerySingle<global::ProductsApp.ProductService.Models.Product> source, int Rating)
+        {
+            if (!source.IsComposable)
+            {
+                throw new global::System.NotSupportedException("The previous function is not composable.");
+            }
+
+            return new global::Microsoft.OData.Client.DataServiceActionQuery(source.Context, source.AppendRequestUri("ProductService.Rate"), new global::Microsoft.OData.Client.BodyOperationParameter("Rating", Rating));
         }
     }
 }

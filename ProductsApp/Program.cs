@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductsApp
 {
-    using Default;
+    using ProductService;
     using ProductService.Models;
 
     class Program
